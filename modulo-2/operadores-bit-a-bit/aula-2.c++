@@ -25,7 +25,7 @@ int main(){
     unsigned char resultado = a | b;
 
     cout << "Binário: " << bitset<8>(resultado) << endl;
-    cout << "Decimal: " << (int)resultado << endl;  //Usando um cast para trasnfomar string em inteiro
+    cout << "Decimal: " << (int)resultado << endl;  //Usando um cast para transformar string em inteiro
 
     return 0;
 
