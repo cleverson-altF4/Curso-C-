@@ -106,10 +106,12 @@ int main(){
 
     for (int i = 0; i < 8; i++)
     {
-        bool ativoA = true;
-        bool ativoB = true;
+        
+        int bitA = (1 << i) & frotaA;
+        int bitB = (1 << i) & frotaB;
 
-        cout << "Frota A: " << frotaA[i] << endl;
+        cout << "A: " << bitA << endl;
+        cout << "B: " << bitB << endl;
         
         
     }
