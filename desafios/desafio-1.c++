@@ -105,16 +105,32 @@ int main(){
 
 
     for (int i = 0; i < 8; i++)
-    {
+    { 
+        bool ativoA = frotaA & (1 << i);
+        bool ativoB = frotaB & (1 << i);
         
-        int bitA = (1 << i) & frotaA;
-        int bitB = (1 << i) & frotaB;
+        if (!ativoA && !ativoB)
+        {
+            cout << i << " continue" << endl;
+            continue;
 
-        cout << "A: " << bitA << endl;
-        cout << "B: " << bitB << endl;
-        
+        } else if (ativoA && ativoB)
+        {
+            cout << i << " Redundância" << endl;
+            somatoria++;
+        } else if (ativoA)
+        {
+            cout << i << " ùnico A - Manter" << endl;
+        } else if (ativoB)
+        {
+            cout << i << " Único B - Transferir" << endl;
+        }
         
     }
+
+    int frotaUnificada = frotaA | frotaB;
+    int Redundancia = frotaA ^ frotaB;
+
     
 
     return 0;
