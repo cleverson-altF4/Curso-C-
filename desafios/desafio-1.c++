@@ -68,6 +68,51 @@ int main(){
     } else {
         cout << "Não tem drones" << endl;
     }
+
+    cout << "\n ---- Missão ----\n";
+
+    int setor = 1;
+
+    do
+    {
+        int sensor = (setor * 3 + 7) % 10 + 1;
+        
+
+        if (sensor > 7 && setor % 2 == 1)
+        {
+            cout << "AMEAÇA CRÌTICA" << endl;
+            break;
+        } else if (sensor > 7 && setor % 2 == 0)
+        {
+            cout << "Setor " << setor << " Aviso!" << endl;
+            setor++;
+            continue;
+        } else {
+            cout << "Setor " << setor << " limpo" << endl;
+            setor++;
+        }
+        
+        
+    } while (setor <= 20);
+
+
+    cout << "\n --- Sincronizar duas frotas ---\n";
+
+    int frotaA = 0b11001010;
+    int frotaB = 0b01110011;
+    int somatoria = 0;
+   
+
+
+    for (int i = 0; i < 8; i++)
+    {
+        bool ativoA = true;
+        bool ativoB = true;
+
+        cout << "Frota A: " << frotaA[i] << endl;
+        
+        
+    }
     
 
     return 0;
