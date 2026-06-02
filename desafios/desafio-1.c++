@@ -131,7 +131,41 @@ int main(){
     int frotaUnificada = frotaA | frotaB;
     int Redundancia = frotaA ^ frotaB;
 
+    if (!(somatoria <= 3))
+    {
+        cout << "Frota superlotada" << endl;
+    }
     
+
+
+    cout << "\n== Resgate sob falha ==\n";
+
+    int status[10] = {
+        0b11001010, 0b00110011, 0b11111111, 0b00000000, 0b10101010, 0b01010101, 0b11110000, 0b00001111, 0b10000001, 0b01111110
+    };
+
+    int energia[10] = {
+        90,15,100,0,55,30,80,45,5,70
+    };
+
+    int prioridade[10] = {
+        1,0,1,0,1,0,0,1,1,0
+    };
+
+    bool parar = false;
+    int contadorCriticos = 0;
+
+    for (int i = 0; i < 11; i++)
+    {
+        if (energia[i]== 0)
+        {   
+            continue; 
+            
+        }
+        
+    }
+    
+
 
     return 0;
 }
