@@ -31,9 +31,25 @@ int main(){
     }
 
 
-    std::cout << "\n--------- Uso do While ---------\n";
+    std::cout << "\n--------- Uso Do While ---------\n";
 
+    int altitude = 100;
 
+    do
+    {   
+        if (altitude <= 10 && altitude == 0)
+        {
+            std::cout << "Motor desligado -- queda livre" << std::endl;
+            break;
+        } else {
+            altitude -=  15;
+            std::cout << "Descendo" << " altitude " << altitude << std::endl;
+        }
+          
+        
+    } while (altitude > 0);
+
+    std::cout << "O drone pousou na altitude " << altitude << std::endl;
     
 
     return 0;
