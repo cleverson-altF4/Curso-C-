@@ -37,9 +37,11 @@ int main(){
 
     do
     {   
-        if (altitude <= 10 && altitude == 0)
+        if (altitude <= 10)
         {
             std::cout << "Motor desligado -- queda livre" << std::endl;
+
+            altitude = 0;
             break;
         } else {
             altitude -=  15;
@@ -50,6 +52,33 @@ int main(){
     } while (altitude > 0);
 
     std::cout << "O drone pousou na altitude " << altitude << std::endl;
+
+
+
+    std::cout << "\n------  Pouso com for + do while juntos ------\n";
+
+    int pistas[5] = {0,1,0,0,1};
+
+    for (int j = 0; j < 5; j++)
+    {
+        if (pistas[j] == 0)
+        {
+            std::cout << "Pista " << j << " está com problemas" << std::endl;
+            continue;
+        }
+
+        int tentativas = 1;
+
+        do
+        {  
+            std::cout << "Pista " << j << " tentativas " << tentativas << std::endl;
+            tentativas++;
+        } while (tentativas <= 3);
+        
+        std::cout << "Alinhado -- pousando na pista " << j << std::endl;
+        break;
+    }
+    
     
 
     return 0;
