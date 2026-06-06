@@ -38,16 +38,16 @@ void modoDrone(int modo){
     switch (modo)
     {
     case 1:
-        cout << "Decolando" << endl;
+        cout << "Decolando" << "\n";
         break;
     case 2:
-        cout << "Voando" << endl;
+        cout << "Voando" << "\n";
         break;
     case 3:
-        cout << "Pousando" << endl;
+        cout << "Pousando" << "\n";
         break;
     default:
-        cout << "Modo desconhecido" << endl;
+        cout << "Modo desconhecido" << "\n";
         break;
     }
 }
