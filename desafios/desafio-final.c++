@@ -105,6 +105,30 @@ void processarDrone(int id, int comb, int alt, int stat, int mod){
     int resultado = contarBits(stat);
     cout << "Bits ativos " << resultado << endl;
     
+    if (alt > 150)
+    {
+        cout << "Altitude perigosa" << endl;
+
+        if (comb > 50)
+        {
+            cout << "Descida autorizada" << endl;
+        }
+        descer(alt);
+        
+    }
+
+    if (alt <= 150 && alt > 0)
+    {
+        cout << "Altitude normal" << endl;
+    }
+    
+
+ 
+
+    if (alt == 0)
+    {
+        cout << "Drone em solo" << "\n";
+    }
     
    
 }
@@ -113,7 +137,7 @@ void processarDrone(int id, int comb, int alt, int stat, int mod){
 
 int main(){
 
-    int ads[6] = {1,2,3,4,5,6};
+    int ids[6] = {1,2,3,4,5,6};
     int combustivel[6] = {80,15,0,55,92,30};
     int altitude[6] = {120, 45,0,200,80,60};
 
@@ -128,8 +152,19 @@ int main(){
 
     int modo[6] = {1,3,0,2,1,3};
 
-
-   
-   
+    for (int i = 0; i < 6; i++)
+    {
+        
+        cout << "----------------------------" << "\n";
+        processarDrone(
+            ids[i], 
+            combustivel[i], 
+            altitude[i], 
+            status[i], 
+            modo[i]
+        );
+        
+    }
+    return 0;
     
 }
