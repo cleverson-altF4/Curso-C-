@@ -19,8 +19,10 @@ float media(float a, float b, float c){
 
 bool eh_par(int numero){
     if (numero % 2==0)
-    {
+    {   
         return true;
+    } else {
+        return false;
     }
     
 }
@@ -29,15 +31,20 @@ int maior_entre_eles(int a, int b, int c){
     
     if (a >= b && a >= c )
     {
-        std::cout << "Maior é A: " << a << "\n"; 
+        return a;
     } else if (b >= a && b >= c)
     {
-        std::cout<< "Maior é B: " << b << "\n";
+        return b;
     } else {
-        std::cout<< "Maior é C: " << c << "\n"; 
+        return c; 
     }
     
-    return;
+   
+}
+
+float converter_celsius(float Fahrenheit ){
+    float celsius = (Fahrenheit - 32) * 5/9;
+    return celsius;
 }
 
 
@@ -56,8 +63,12 @@ int main(){
     int resultado_ehPar = eh_par(2);
     std::cout<< "Número par ou ìmpar: "<< resultado_ehPar << "\n";
 
-    int resultado_maior_entre_eles = maior_entre_eles(10,1,0);
+    int resultado_maior_entre_eles = maior_entre_eles(5,1,0);
     std::cout<< "Maior entre eles: " << resultado_maior_entre_eles << "\n";
+
+   
+    float resultado_Fahrenheit = converter_celsius(15);
+    std::cout<<"Fahrenheit: "<< std::fixed << std::setprecision(2) <<resultado_Fahrenheit << "\n";
 
 
 }
