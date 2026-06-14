@@ -18,13 +18,7 @@ float media(float a, float b, float c){
 }
 
 bool eh_par(int numero){
-    if (numero % 2==0)
-    {   
-        return true;
-    } else {
-        return false;
-    }
-    
+    return numero % 2 == 0;
 }
 
 int maior_entre_eles(int a, int b, int c){
@@ -60,7 +54,7 @@ int main(){
     std::cout<< "Média A,B,C: " << resultado_media << "\n";
 
     
-    int resultado_ehPar = eh_par(2);
+    bool resultado_ehPar = eh_par(2);
     std::cout<< "Número par ou ìmpar: "<< resultado_ehPar << "\n";
 
     int resultado_maior_entre_eles = maior_entre_eles(5,1,0);
