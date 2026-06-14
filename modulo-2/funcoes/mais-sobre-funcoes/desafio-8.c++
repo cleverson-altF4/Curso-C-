@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-#include <iomanip>
+
 
 void imprimir(int numero){
     std::cout << "Numero inteiro: " << numero << "\n";
@@ -70,11 +70,14 @@ void apresentar(std::string nome, int idade){
 
 int main(){
     imprimir(5);
+
+    imprimir(2.5f);
+
     
     int res_somar = somar(2,2);
     std::cout << "Somar inteiro: " << res_somar << "\n";
 
-    float res_soma= somar(2, 5);
+    float res_soma= somar(2.0f,5.1f);
     std::cout << "Somar decimal: " << res_soma << "\n";
 
     int res_maior = maior(5,4);
@@ -87,6 +90,9 @@ int main(){
     int res_area = area(25);
     std::cout << "Lado da area: " << res_area << "\n";
 
-    float res_areaa = area(25);
+    float res_areaa = area(25, 14);
     std::cout << "Largura x altura: " << res_areaa << "\n";
+
+    apresentar("Clevison");
+    apresentar("Clevison", 31);
 }
