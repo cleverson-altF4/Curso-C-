@@ -6,7 +6,7 @@ void depositar(int* saldo, int valor){
     {
         std::cout<< "Conta inválida\n"; 
     }else {
-       
+       *saldo += valor;
     }
     
 }
@@ -17,7 +17,13 @@ void sacar(int* saldo, int valor){
         std::cout<<"Conta inválida\n";
     } else {
 
-        saldoSuficiente(saldo, valor);
+        if (saldoSuficiente(saldo, valor))
+        {
+            *saldo -= valor;
+        } else {
+            std::cout<<"Saldo insuficiente\n"; 
+        }
+        
     }
     
     
