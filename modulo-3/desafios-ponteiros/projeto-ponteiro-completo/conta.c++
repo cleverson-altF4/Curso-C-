@@ -36,3 +36,7 @@ bool saldoSuficiente(int*saldo, int valor){
     
 }
 
+void exibirSaldo(int*saldo){
+    std:: cout << "Saldo atual: " << *saldo << "\n";
+}
+
