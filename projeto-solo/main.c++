@@ -24,11 +24,15 @@ int main(){
 
         
     }
+
+    for(int i = 0; i < 4; i++){
+        int saldo = saldoGols(golsFeitos, golsSofridos, i);
+        std::cout << selecoes[i] << " - Saldo: " << saldo << "\n";
+    }
     
-    int saldo = saldoGols(golsFeitos, golsSofridos, 0);
+    
     int MaiorSaldoDeGols = TimeMaiorsaldo(golsFeitos, golsSofridos, 4);
     int first = (primeiroLugar(pontos, 4)); 
-    std::cout << "Saldo de gols: " << saldo << "\n"; 
     std::cout << "Maior saldo de gols: " << selecoes[MaiorSaldoDeGols] << "\n";
     std::cout << "Primeiro lugar: " << selecoes[first] << "\n";
     
