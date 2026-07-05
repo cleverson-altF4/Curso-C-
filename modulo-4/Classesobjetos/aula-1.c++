@@ -15,6 +15,7 @@ class aluno {
 int main(){
     
     aluno peste;
+    aluno outraPeste;
 
     std::cout << "Nome do cabra: " << peste.nome << "\n";
     std::cout << "Idade: " << peste.idade << "\n";
