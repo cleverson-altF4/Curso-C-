@@ -13,7 +13,7 @@ class carro {
         
 
     public:
-        carro(std::string m, int year, int valor){
+        carro(std::string m, int year, float valor){
             marca = m;
             ano = year;
             preco = valor;
