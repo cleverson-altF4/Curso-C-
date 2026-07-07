@@ -2,18 +2,18 @@
 #include <string>
 #include <iostream>
 
-produto::produto(std::string name, float valor, int total){
+produto::produto(std::string name, double valor, int total){
     nome = name;
     preco = valor;
     quantidade = total;
 }
 
-
+//return getters  ----------------------
 std::string produto::getNome(){
     return nome;
 }
 
-float produto::getPreco(){
+double produto::getPreco(){
     return preco;
 }
 
@@ -22,11 +22,12 @@ int produto::getQuantidade(){
 }
 
 
+//setters -----------------------
 void produto::setNome(std::string name){
     nome = name;
 }
 
-void produto::setPreco(float valor){
+void produto::setPreco(double valor){
     preco = valor;
 }
 

@@ -3,30 +3,30 @@
 #include <string>
 
 class produto {
-    //Classe do objeto produto
+    //Classe do objeto produto privado
     private:
-        std::string nome;
-        float preco;
+        std::string nome;  
+        double preco;
         int quantidade;
 
 
     public:
         //metodo
-        produto(std::string name, float valor, int total);
+        produto(std::string name, double valor, int total);
 
     //função para exibir
     void exibir();
 
     //getters ------------------------------*
     std::string getNome();
-    float getPreco();
+    double getPreco();
     int getQuantidade();
     // -------------------------------------*
 
 
     //setters ------------------------------*
     void setNome(std::string name);
-    void setPreco(float valor);
+    void setPreco(double valor);
     void setQuantidade(int total);
     //  ------------------------------------*
 
