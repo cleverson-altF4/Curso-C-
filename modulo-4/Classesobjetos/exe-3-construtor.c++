@@ -11,7 +11,8 @@ class carro{
         float preco;
 
 
-        carro(std::string m, int year, float valor){ //Chama a classe em vez de uma função
+        carro(std::string m, int year, float valor){ //Chama a classe em vez de uma função 
+        //construtor
         marca = m;
         ano = year;
         preco = valor;

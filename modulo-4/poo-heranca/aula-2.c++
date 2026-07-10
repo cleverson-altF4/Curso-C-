@@ -22,7 +22,7 @@ class clevison {
 };
 
 
-class brother : public clevison {
+class brother : public clevison { //ele herda a herança da classe clevison
     public:
         std::string nome2;
 
@@ -44,6 +44,8 @@ int main(){
     irmao.idade = 31;
     irmao.mostrar();
     irmao.nome2 = "Cleiton";
+    irmao.mostrar2();
+    irmao.nome2 = "Cuca";
     irmao.mostrar2();
 
 
