@@ -56,17 +56,21 @@ class gerente : public funcionario { //gerente herda do funcionário
 
         }
 
-        void exibirCompleto(){
-            exibir();
-            std::cout << "Equipe: " << equipe << "\n";
-
-        }
-
 
         double calculcarBonus(){
             // função que retorna salario
             return getSalario() * 0.20;
         }
+
+        void exibirCompleto(){
+            exibir();
+            std::cout << "Equipe: " << equipe << "\n";
+            std::cout << "Bônus: " << calculcarBonus() << "\n";
+
+        }
+
+
+       
 
 
 };
@@ -81,17 +85,17 @@ class vendedor : public funcionario { //Vendedor herda do funcionário
             comissao = Comissao;
         }
 
-        void exibirCompleto(){
-            exibir();
-            std::cout << "Comissão R$: " << comissao << "\n";
-        }
 
         double calcularTotal(){
             return getSalario() + comissao;
             
         }
 
-        void 
+        void exibirCompleto(){
+            exibir();
+            std::cout << "Comissão R$: " << comissao << "\n";
+            std::cout << "Total R$: " << calcularTotal() << "\n";
+        }
 
 
 };
@@ -104,6 +108,7 @@ int main(){
     vendedor vendedor2("Cigano", 550.00, 350.00);
     vendedor1.exibirCompleto();
     vendedor2.exibirCompleto();
+    pessoa1.exibirCompleto();
 
 
     return 0;
