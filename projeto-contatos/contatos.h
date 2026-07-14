@@ -5,32 +5,30 @@
 class contato{
     private:
         std::string nome;
-        int telefone;
+        long long telefone;
         std::string email;
     public:
-        contato(std::string Nome, int Telefone, std::string Email){
-        
-            this-> nome = nome;
-            this-> telefone = telefone;
-            this-> email = Email;
-        }
+        //Não precisa usar o This-> alocação
+        contato(std::string Nome, long long Telefone, std::string Email);
 
         //getters
         std::string getnome();
-        int gettelefone();
+        long long gettelefone();
         std::string getemail();
 
 
         //setters
         void  setnome(std::string Nome);
-        void  settelefone(int Telefone);
+        void  settelefone(long long Telefone);
         void  setemail(std::string Email);
 
 
         void exibir();
 
+        //destrutor
+        ~contato() = default;
 
-        ~contato();
+
 };
 
 

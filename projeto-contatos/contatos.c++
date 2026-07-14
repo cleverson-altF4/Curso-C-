@@ -2,53 +2,44 @@
 #include <string>
 #include <iostream>
 
+//Chamando a classe via ::
+contato::contato(std::string Nome, long long Telefone, std::string Email){
 
-class contato{
-    private:
-        std::string nome;
-        int telefone;
-        std::string email;
-    public:
-        //construtor
-        contato(std::string Nome, int Telefone, std::string Email){
-        
-            this-> nome = nome;
-            this-> telefone = telefone;
-            this-> email = Email;
-        }
+    this-> nome = Nome;
+    this->telefone = Telefone;
+    this->email = Email;
 
-        //getters
-        std::string getnome(){
-            return nome;
-        }
+}
 
-        int gettelefone(){
-            return telefone;
-        }
+//pegando a classe via :: e usando em getter()
+std::string contato::getnome(){
+    return nome;
 
-        std::string getemail(){
-            return email;
-        }
+}
 
+long long contato::gettelefone(){
+    return telefone;
+}
 
-        //setters
-        void setnome(std::string Nome){
-            nome = Nome;
-        }
+std::string contato::getemail(){
+    return email;
+}
+//setters chamando com void
+ void contato::setnome(std::string Nome){
+    nome = Nome;
+}
 
-        void settelefone(std::string Telefone){
-            telefone = telefone;
-        }
+void contato::settelefone(long long Telefone){
+    telefone = Telefone;
+}
 
-        void setemail(std::string Email){
-            email = email;
-        }
+void contato::setemail(std::string Email){
+    email = Email;
+}
 
-        void exibir(){
-            std::cout << "Nome: " << nome << "\n";
-            std::cout << "Telefone: " << telefone << "\n";
-            std::cout << "Email: " << " @" << nome << "gmail.com\n"; 
-        }
-
-
-};
+//Chama a classe contato junto com a função void exibir()
+void contato::exibir(){
+    std::cout  << "Nome: " << nome << "\n";
+    std::cout << "Telefone:: " << telefone << "\n";
+    std::cout << "Email: " <<  email << "\n";
+}
