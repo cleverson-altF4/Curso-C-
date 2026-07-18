@@ -8,12 +8,12 @@ class Roupa {
         std::string tamanho;
         double preco;
         int quantidade;
-
-    Roupa(std::string nome, std::string tamanho, int quantidade, double preco);
-    std::string getnome();
-    std::string gettamanho();
-    int getquantidade();
-    double getpreco();
+    public:
+        Roupa(std::string nome, std::string tamanho, int quantidade, double preco);
+        std::string getnome() const;
+        std::string gettamanho() const;
+        int getquantidade() const;
+        double getpreco() const;
 
 
     void exibir();
